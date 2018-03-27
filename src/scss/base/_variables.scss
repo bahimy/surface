@@ -1,0 +1,23 @@
+/* Colors */
+
+$color-purple: rgb(94, 66, 176);
+$color-blue: rgb(10, 14, 52);
+$color-faintgray: rgb(240, 240, 240);
+$color-gray: rgb(193, 193, 193);
+$color-black: rgb(0, 0, 0);
+$color-white: rgb(255, 255, 255);
+
+$color-brand-dark: $color-blue;
+$color-canvas: $color-white;
+
+
+
+/* Typography */
+
+$font-sans: tahoma, sans-serif;
+$font-serif: georgia, serif;
+
+// Basic font size
+$font-paragraph: 2em;
+
+$font-sizes: getFontSizes($font-paragraph);

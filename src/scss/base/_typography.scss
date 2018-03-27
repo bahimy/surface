@@ -1,0 +1,30 @@
+html {
+  font-size: 62.5%;
+  font-family: $font-sans;
+}
+
+h1, h2 {
+  font-size: nth($font-sizes, 1);
+  font-weight: bold;
+  line-height: 0.614376407em;
+  margin-top: 0.921564610em;
+  margin-bottom: 0.307188203em;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+h3 {
+  font-size: nth($font-sizes, 4);
+  font-weight: bold;
+  line-height: 1.2em;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+p {
+  font-size: nth($font-sizes, 5);
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}

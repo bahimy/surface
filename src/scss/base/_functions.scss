@@ -1,0 +1,11 @@
+@function getFontSizes($init) {
+  $result: ();
+  $result: append($result, $init * 1.25 * 1.25 * 1.25 * 1.25);
+  $result: append($result, $init * 1.25 * 1.25 * 1.25);
+  $result: append($result, $init * 1.25 * 1.25);
+  $result: append($result, $init * 1.25);
+  $result: append($result, $init);
+  $result: append($result, $init * 0.75);
+  $result: append($result, $init * 0.75 * 0.75);
+  @return $result;
+}
