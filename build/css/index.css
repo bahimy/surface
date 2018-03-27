@@ -59,7 +59,7 @@ html {
   font-family: tahoma, sans-serif; }
 
 h1, h2 {
-  font-size: 4.883em;
+  font-size: 4.578em;
   font-weight: bold;
   line-height: 0.614376407em;
   margin-top: 0.921564610em;
@@ -68,7 +68,7 @@ h1, h2 {
   letter-spacing: .02em; }
 
 h3 {
-  font-size: 2.5em;
+  font-size: 1.875em;
   font-weight: bold;
   line-height: 1.2em;
   margin-top: 1.8em;
@@ -77,7 +77,7 @@ h3 {
   letter-spacing: .02em; }
 
 p {
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 1.5em;
   margin-bottom: 1.5em; }
 
@@ -89,12 +89,75 @@ a {
   color: white;
   background-color: #0a0e34; }
 
+.hero__container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1.5em;
+  text-align: center; }
+
 .hero__brand {
   float: left; }
 
 .hero__motto {
   text-align: right; }
 
+.hero__headers {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 14em 0; }
+
 .hero__header {
   line-height: 1em;
   margin: 0; }
+
+.hero__header--left {
+  margin-top: 0.228752814em;
+  text-align: left; }
+
+.hero__header--right {
+  margin-bottom: 0.228752814em;
+  text-align: right; }
+
+.hero__buttons {
+  letter-spacing: 3em;
+  margin-bottom: 4.5em; }
+
+.navbar {
+  font-size: 1.5em;
+  text-align: right;
+  color: #5e42b0;
+  overflow: hidden;
+  margin-right: -.35em; }
+
+.navbar__item {
+  display: inline; }
+
+.navbar__link {
+  display: inline-block;
+  padding: 0 .35em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: .02em; }
+
+.button {
+  display: inline-block;
+  font-size: 1.5em;
+  text-align: left;
+  line-height: 1em;
+  padding: .5em 1.5em .5em 3.5em;
+  border-radius: 1.5em;
+  background-color: #5e42b0;
+  text-transform: uppercase;
+  letter-spacing: .05em; }
+
+.button__brand {
+  font-weight: bold; }
+  .button__brand:before {
+    content: "\A";
+    white-space: pre; }
+
+.button--as {
+  background: #5e42b0 url("../images/astore.png") no-repeat 1.2em center/1.5em; }
+
+.button--gp {
+  background: #5e42b0 url("../images/gplay.png") no-repeat 1.2em center/1.5em; }

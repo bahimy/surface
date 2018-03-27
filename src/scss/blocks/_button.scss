@@ -1,0 +1,28 @@
+.button {
+  display: inline-block;
+  font-size: nth($font-sizes, 6);
+  text-align: left;
+  line-height: 1em;
+  padding: .5em 1.5em .5em 3.5em;
+  border-radius: 1.5em;
+  background-color: $color-brand-light;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.button__brand {
+  font-weight: bold;
+
+  &:before {
+    content: "\A";
+    white-space: pre;
+  }
+}
+
+.button--as {
+  background: $color-brand-light url('../images/astore.png') no-repeat 1.2em center/1.5em;
+}
+
+.button--gp {
+  background: $color-brand-light url('../images/gplay.png') no-repeat 1.2em center/1.5em;
+}

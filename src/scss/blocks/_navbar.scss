@@ -1,0 +1,19 @@
+.navbar {
+  font-size: nth($font-sizes, 6);
+  text-align: right;
+  color: $color-brand-light;
+  overflow: hidden;
+  margin-right: -.35em;
+}
+
+.navbar__item {
+  display: inline;
+}
+
+.navbar__link {
+  display: inline-block;
+  padding: 0 .35em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
