@@ -3,6 +3,11 @@
         "./base/_variables.scss",
         "./base/_common.scss",
         "./base/_typography.scss",
-        "./blocks/_hero.scss",
-        "./blocks/_navbar.scss",
+        "./blocks/hero/_hero.scss",
+        "./blocks/navbar/_navbar.scss",
         "./blocks/_button.scss";
+
+@media (max-width: 1023px) {
+  @import "./blocks/hero/_lt1024.scss";
+  @import "./blocks/navbar/_lt1024.scss";
+}

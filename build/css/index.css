@@ -87,13 +87,30 @@ a {
 
 .hero {
   color: white;
-  background-color: #0a0e34; }
+  background-color: #0a0e34;
+  background: url("../images/herobkg.jpg") center/cover; }
 
 .hero__container {
+  position: relative;
+  z-index: 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   max-width: 1024px;
   margin: 0 auto;
   padding: 1.5em;
   text-align: center; }
+
+.hero__line {
+  width: 100%; }
 
 .hero__brand {
   float: left; }
@@ -102,15 +119,33 @@ a {
   text-align: right; }
 
 .hero__headers {
+  position: relative;
+  -ms-flex-preferred-size: 800px;
+      flex-basis: 800px;
   max-width: 800px;
+  padding: 14em 0 0;
   margin: 0 auto;
-  padding: 14em 0; }
+  margin-top: auto; }
 
 .hero__header {
   line-height: 1em;
   margin: 0; }
 
+.hero__decor {
+  background: url("../images/slash.png") center/contain no-repeat;
+  position: absolute;
+  z-index: 2;
+  width: 15em;
+  top: 10em;
+  left: 25%; }
+  .hero__decor:after {
+    content: "";
+    display: block;
+    padding-top: 125%; }
+
 .hero__header--left {
+  position: relative;
+  z-index: 3;
   margin-top: 0.228752814em;
   text-align: left; }
 
@@ -118,16 +153,27 @@ a {
   margin-bottom: 0.228752814em;
   text-align: right; }
 
+.hero__navbar {
+  position: relative;
+  z-index: 4;
+  -ms-flex-preferred-size: 800px;
+      flex-basis: 800px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 9em;
+  margin-bottom: auto; }
+
 .hero__buttons {
   letter-spacing: 3em;
-  margin-bottom: 4.5em; }
+  margin-bottom: 4.5em;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%; }
 
 .navbar {
   font-size: 1.5em;
   text-align: right;
   color: #5e42b0;
-  overflow: hidden;
-  margin-right: -.35em; }
+  overflow: hidden; }
 
 .navbar__item {
   display: inline; }
@@ -161,3 +207,12 @@ a {
 
 .button--gp {
   background: #5e42b0 url("../images/gplay.png") no-repeat 1.2em center/1.5em; }
+
+@media (max-width: 1023px) {
+  .hero__header--right {
+    position: relative;
+    z-index: 4; }
+  .navbar {
+    text-align: inherit;
+    padding-top: 3em;
+    padding-bottom: 6em; } }
