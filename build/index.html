@@ -4,16 +4,20 @@
 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Surface</title>
   <link rel="stylesheet" href="./css/index.css" />
+  <!--[if lt IE 9]>
+    <script src="./js/html5shiv.min.js"></script>
+  <![endif]-->
 </head>
 
 <body>
 <section class="hero">
   <div class="hero__container">
     <header class="hero__line">
-      <a href="#" class="hero__brand"><img src="images/brand.png" alt="Brand logo" /></a>
+      <a href="#" class="hero__brand"><img class="hero__logo" src="images/brand.png" alt="Brand logo" /></a>
       <p class="hero__motto">For athlets and coaches</p>
     </header>
     <div class="hero__headers">
@@ -22,7 +26,7 @@
       <div class="hero__decor"></div>
     </div>
     <nav class="navbar hero__navbar">
-      <ul>
+      <ul class="navbar__container">
         <li class="navbar__item"><a class="navbar__link" href="#">football</a></li>
         <li class="navbar__item"><a class="navbar__link" href="#">basketball</a></li>
         <li class="navbar__item"><a class="navbar__link" href="#">baseball</a></li>
@@ -31,8 +35,8 @@
       </ul>
     </nav>
     <div class="hero__buttons">
-      <a class="button button--as" href="#">Download on the <span class="button__brand">app store</span></a>
-      <a class="button button--gp" href="#">Get it on <span class="button__brand">google play</span></a>
+      <a class="button button--as" href="#">Download on the<br><span class="button__brand">app store</span></a>
+      <a class="button button--gp" href="#">Get it on<br><span class="button__brand">google play</span></a>
     </div>
   </div>
 </section>

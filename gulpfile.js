@@ -59,8 +59,15 @@ gulp.task('html', ['images', 'copyfonts'], function() {
 })
 
 // JS processing
-gulp.task('js', function() {
-    var jsbuild = gulp.src(folder.src + 'js/**/*.js').on('error', swallowError)
+gulp.task('js_split', function() {
+    var out = folder.build + 'js/';
+    return gulp.src(folder.src + 'js/chunks/**/*.js')
+        .pipe(newer(out))
+        .pipe(gulp.dest(out));
+});
+
+gulp.task('js', ['js_split'], function() {
+    var jsbuild = gulp.src(folder.src + 'js/concat/*.js').on('error', swallowError)
         .pipe(deporder())
         .pipe(concat('main.js'))
 

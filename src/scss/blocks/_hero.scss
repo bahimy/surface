@@ -38,6 +38,8 @@ a {
 .hero__headers {
   position: relative;
   flex-basis: 800px;
+  width: 800px;
+  min-width: 0;
   max-width: 800px;
   padding: 14em 0 0;
   margin: 0 auto;
@@ -90,4 +92,44 @@ a {
   letter-spacing: 3em;
   margin-bottom: 4.5em;
   flex-basis: 100%;
+}
+
+@media (max-width: 699px) {
+  .hero__header--right {
+    position: relative;
+    z-index: 4;
+  }
+
+  .hero__decor {
+    left: 33%;
+  }
+}
+
+@media (max-width: 499px) {
+  .hero__brand {
+    float: none;
+  }
+
+  .hero__logo {
+    margin-top: 4em;
+    width: 22em;
+  }
+
+  .hero__motto {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 549px) {
+  .hero__headers {
+    padding-top: 3em;
+  }
+
+  .hero__decor {
+    top: 1em;
+  }
+
+  .hero__navbar {
+    padding-bottom: 1em;
+  }
 }

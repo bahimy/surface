@@ -12,11 +12,6 @@
 
 .button__brand {
   font-weight: bold;
-
-  &:before {
-    content: "\A";
-    white-space: pre;
-  }
 }
 
 .button--as {

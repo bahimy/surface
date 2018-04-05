@@ -122,6 +122,8 @@ a {
   position: relative;
   -ms-flex-preferred-size: 800px;
       flex-basis: 800px;
+  width: 800px;
+  min-width: 0;
   max-width: 800px;
   padding: 14em 0 0;
   margin: 0 auto;
@@ -176,12 +178,15 @@ a {
   overflow: hidden; }
 
 .navbar__item {
-  display: inline; }
+  display: inline-block;
+  zoom: 1;
+  *display: inline; }
 
 .navbar__link {
-  display: inline-block;
+  white-space: nowrap;
+  display: block;
   padding: 0 .35em;
-  line-height: 1.5em;
+  line-height: 48px;
   text-transform: uppercase;
   letter-spacing: .02em; }
 
@@ -198,9 +203,6 @@ a {
 
 .button__brand {
   font-weight: bold; }
-  .button__brand:before {
-    content: "\A";
-    white-space: pre; }
 
 .button--as {
   background: #5e42b0 url("../images/astore.png") no-repeat 1.2em center/1.5em; }
@@ -208,11 +210,52 @@ a {
 .button--gp {
   background: #5e42b0 url("../images/gplay.png") no-repeat 1.2em center/1.5em; }
 
-@media (max-width: 1023px) {
+@media (max-width: 699px) {
   .hero__header--right {
     position: relative;
     z-index: 4; }
+  .hero__decor {
+    left: 33%; }
   .navbar {
-    text-align: inherit;
+    text-align: center;
     padding-top: 3em;
-    padding-bottom: 6em; } }
+    padding-bottom: 6em; }
+  .navbar__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+
+@media (max-width: 499px) {
+  .hero__brand {
+    float: none; }
+  .hero__logo {
+    margin-top: 4em;
+    width: 22em; }
+  .hero__motto {
+    display: none; }
+  .navbar {
+    font-size: 1.875em; } }
+
+@media (orientation: landscape) and (max-height: 549px) {
+  .hero__headers {
+    padding-top: 3em; }
+  .hero__decor {
+    top: 1em; }
+  .hero__navbar {
+    padding-bottom: 1em; }
+  .navbar {
+    padding: unset;
+    text-align: right; }
+  .navbar__container {
+    display: block; } }
+
+@media (max-width: 699px) and (max-width: 699px) {
+  html {
+    font-size: 50%; } }
+
+@media (max-width: 499px) and (max-width: 499px) {
+  html {
+    font-size: 30%; } }
