@@ -69,7 +69,7 @@ gulp.task('js_split', function() {
 gulp.task('js', ['js_split'], function() {
     var jsbuild = gulp.src(folder.src + 'js/concat/*.js').on('error', swallowError)
         .pipe(deporder())
-        .pipe(concat('main.js'))
+        .pipe(concat('index.js'))
 
     if (!devBuild) {
         jsbuild = jsbuild

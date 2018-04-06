@@ -15,7 +15,7 @@
 
 <body>
 <section class="hero">
-  <div class="hero__container">
+  <div class="hero__container js-hero__container">
     <header class="hero__line">
       <a href="#" class="hero__brand"><img class="hero__logo" src="images/brand.png" alt="Brand logo" /></a>
       <p class="hero__motto">For athlets and coaches</p>
@@ -40,19 +40,19 @@
     </div>
   </div>
 </section>
-<section>
-  <h2>Athlets</h2>
-  <ol>
-    <li>
-      <h3>Connection</h3>
+<section class="participant">
+  <h2 class="participant__header">Athlets</h2>
+  <ol class="participant__activities">
+    <li class="participant__streak participant__streak--top">
+      <h3 class="participant__header participant__header--sub">Connection</h3>
       <p>Connection with coaches directly, you can ping coaches to view profile.</p>
     </li>
-    <li>
-      <h3>Collaboration</h3>
+    <li class="participant__streak participant__streak--middle">
+      <h3 class="participant__header participant__header--sub participant__header--nomarg">Collaboration</h3>
       <p>Work with other student athletes to increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.</p>
     </li>
-    <li>
-      <h3>Growth</h3>
+    <li class="participant__streak participant__streak--bottom">
+      <h3 class="participant__header participant__header--sub participant__header--nomarg participant__header--white">Growth</h3>
       <p>Resources and tools for you to get better as a student Athlete. Access to training classes, tutor rsessions, etc.</p>
     </li>
   </ol>
@@ -108,6 +108,7 @@
     </ol>
   </footer>
 </section>
+<script src="./js/index.js"></script>
 </body>
 
 </html>

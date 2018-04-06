@@ -152,6 +152,8 @@ a {
   text-align: left; }
 
 .hero__header--right {
+  overflow: hidden;
+  white-space: nowrap;
   margin-bottom: 0.228752814em;
   text-align: right; }
 
@@ -210,7 +212,45 @@ a {
 .button--gp {
   background: #5e42b0 url("../images/gplay.png") no-repeat 1.2em center/1.5em; }
 
+.participant__streak {
+  padding: 0 1em;
+  padding-bottom: .001em;
+  counter-increment: step-counter; }
+
+.participant__header {
+  color: #c1c1c1; }
+
+.participant__header--sub {
+  padding-top: .55em;
+  margin-top: 1.25em; }
+  .participant__header--sub:before {
+    font-size: .8em;
+    line-height: 1.2;
+    vertical-align: top;
+    content: "0" counter(step-counter);
+    border-bottom: 2px solid #0a0e34;
+    color: #0a0e34;
+    margin-right: .5em; }
+
+.participant__header--nomarg {
+  margin-top: 0; }
+
+.participant__header--white {
+  color: white; }
+  .participant__header--white:before {
+    color: white;
+    border-color: white; }
+
+.participant__streak--middle {
+  background-color: #f0f0f0; }
+
+.participant__streak--bottom {
+  background-color: #5e42b0;
+  color: white; }
+
 @media (max-width: 699px) {
+  html {
+    font-size: 50%; }
   .hero__header--right {
     position: relative;
     z-index: 4; }
@@ -229,6 +269,8 @@ a {
             justify-content: space-between; } }
 
 @media (max-width: 499px) {
+  html {
+    font-size: 30%; }
   .hero__brand {
     float: none; }
   .hero__logo {
@@ -251,11 +293,3 @@ a {
     text-align: right; }
   .navbar__container {
     display: block; } }
-
-@media (max-width: 699px) and (max-width: 699px) {
-  html {
-    font-size: 50%; } }
-
-@media (max-width: 499px) and (max-width: 499px) {
-  html {
-    font-size: 30%; } }

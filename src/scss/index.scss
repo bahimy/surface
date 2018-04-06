@@ -2,15 +2,8 @@
         "./base/_functions.scss",
         "./base/_variables.scss",
         "./base/_common.scss",
-        "./base/typography/_typography.scss",
+        "./base/_typography.scss",
         "./blocks/_hero.scss",
         "./blocks/_navbar.scss",
-        "./blocks/_button.scss";
-
-@media (max-width: 699px) {
-  @import "./base/typography/_lt700.scss";
-}
-
-@media(max-width: 499px) {
-  @import "./base/typography/_lt500.scss";
-}
+        "./blocks/_button.scss",
+        "./blocks/_participant.scss";

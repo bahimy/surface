@@ -28,3 +28,15 @@ p {
   line-height: 1.5em;
   margin-bottom: 1.5em;
 }
+
+@media(max-width: 699px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media(max-width: 499px) {
+  html {
+    font-size: 30%;
+  }
+}

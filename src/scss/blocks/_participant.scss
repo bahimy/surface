@@ -1,0 +1,48 @@
+.participant__streak {
+  padding: 0 1em;
+  padding-bottom: .001em;
+  counter-increment: step-counter;
+}
+
+.participant__header {
+  color: $color-header;
+}
+
+.participant__header--sub {
+  padding-top: .55em;
+  margin-top: 1.25em;
+
+  &:before {
+    font-size: .8em;
+    line-height: 1.2;
+    vertical-align: top;
+    content: "0" counter(step-counter);
+    border-bottom: 2px solid $color-strip-dark;
+    color: $color-strip-dark;
+    margin-right: .5em;
+  }
+}
+.participant__header--nomarg {
+  margin-top: 0;
+}
+
+.participant__header--white {
+  color: $color-canvas;
+
+  &:before {
+    color: $color-canvas;
+    border-color: $color-canvas;
+  }
+}
+
+.participant__streak--top {
+}
+
+.participant__streak--middle {
+  background-color: $color-strip-light;
+}
+
+.participant__streak--bottom {
+  background-color: $color-strip-middle;
+  color: $color-canvas;
+}
