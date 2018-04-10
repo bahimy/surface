@@ -47,6 +47,7 @@ table {
 
 /* Colors */
 /* Typography */
+/* Break points */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -212,13 +213,49 @@ a {
 .button--gp {
   background: #5e42b0 url("../images/gplay.png") no-repeat 1.2em center/1.5em; }
 
+.participant {
+  overflow: hidden; }
+
+.participant__wrap {
+  position: relative;
+  z-index: 0;
+  max-width: 1024px;
+  margin: 0 auto; }
+
+.participant__image {
+  position: absolute;
+  display: block;
+  top: -2em;
+  bottom: -2em;
+  left: 5%;
+  width: 300px;
+  background: url("../images/athlet.png") center/contain no-repeat;
+  z-index: 3;
+  /* @include breakpoint(medium) {
+    .participant__image {
+      right: 60%;
+      left: unset;
+    }
+  } */ }
+
 .participant__streak {
+  position: relative;
   padding: 0 1em;
-  padding-bottom: .001em;
   counter-increment: step-counter; }
+  .participant__streak:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -9999px;
+    right: -9999px;
+    background-color: inherit;
+    z-index: -1; }
 
 .participant__header {
-  color: #c1c1c1; }
+  color: #c1c1c1;
+  padding-left: 40%; }
 
 .participant__header--sub {
   padding-top: .55em;
@@ -231,6 +268,12 @@ a {
     border-bottom: 2px solid #0a0e34;
     color: #0a0e34;
     margin-right: .5em; }
+
+.participant__descr {
+  padding-left: 40%; }
+  .participant__descr:last-child {
+    margin-bottom: 0;
+    padding-bottom: 1.5em; }
 
 .participant__header--nomarg {
   margin-top: 0; }
@@ -248,9 +291,27 @@ a {
   background-color: #5e42b0;
   color: white; }
 
+/* @media screen and (max-width: 698px) {
+  .participant__image {
+    right: 60%;
+    left: unset;
+  }
+} */
+
+@media screen and (max-width: 699px) {
+    html {
+      font-size: 50%; } }
+
+@media screen and (max-width: 499px) {
+    html {
+      font-size: 30%; }
+    .participant__image .participant__image {
+      position: static;
+      width: 100%;
+      height: 200px;
+      margin-top: 4.5em; } }
+
 @media (max-width: 699px) {
-  html {
-    font-size: 50%; }
   .hero__header--right {
     position: relative;
     z-index: 4; }
@@ -269,8 +330,6 @@ a {
             justify-content: space-between; } }
 
 @media (max-width: 499px) {
-  html {
-    font-size: 30%; }
   .hero__brand {
     float: none; }
   .hero__logo {
@@ -293,3 +352,13 @@ a {
     text-align: right; }
   .navbar__container {
     display: block; } }
+
+@media screen and (max-width: 799px) {
+  .participant__image {
+    left: 0; } }
+
+@media screen and (max-width: 498px) {
+  .participant__header {
+    padding-left: 1em; }
+  .participant__descr {
+    padding-left: 1em; } }

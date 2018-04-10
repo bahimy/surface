@@ -26,3 +26,12 @@ $font-serif: georgia, serif;
 $font-paragraph: 1.5em;
 
 $font-sizes: getFontSizes($font-paragraph);
+
+
+
+/* Break points */
+
+$breakpoints: (
+  'small': 499px,
+  'medium': 699px
+);
