@@ -227,16 +227,15 @@ a {
   display: block;
   top: -2em;
   bottom: -2em;
-  left: 5%;
+  right: 60%;
   width: 300px;
   background: url("../images/athlet.png") center/contain no-repeat;
-  z-index: 3;
-  /* @include breakpoint(medium) {
-    .participant__image {
-      right: 60%;
-      left: unset;
-    }
-  } */ }
+  z-index: 3; }
+
+.participant__activities {
+  position: relative;
+  overflow: unset;
+  white-space: nowrap; }
 
 .participant__streak {
   position: relative;
@@ -270,7 +269,8 @@ a {
     margin-right: .5em; }
 
 .participant__descr {
-  padding-left: 40%; }
+  padding-left: 40%;
+  white-space: normal; }
   .participant__descr:last-child {
     margin-bottom: 0;
     padding-bottom: 1.5em; }
@@ -284,6 +284,9 @@ a {
     color: white;
     border-color: white; }
 
+.participant__streak--top {
+  background-color: white; }
+
 .participant__streak--middle {
   background-color: #f0f0f0; }
 
@@ -291,74 +294,108 @@ a {
   background-color: #5e42b0;
   color: white; }
 
-/* @media screen and (max-width: 698px) {
-  .participant__image {
-    right: 60%;
-    left: unset;
-  }
-} */
+.slider__toggles {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 3px;
+  display: none; }
+
+.slider__toggle {
+  display: inline-block;
+  width: 48px;
+  height: 48px; }
+  .slider__toggle:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 19px;
+    border-radius: 11px;
+    border: 1px solid #5e42b0;
+    background-color: white; }
+
+.slider__toggle--active:before {
+  background-color: #5e42b0;
+  border-color: white; }
 
 @media screen and (max-width: 699px) {
     html {
-      font-size: 50%; } }
-
-@media screen and (max-width: 499px) {
-    html {
-      font-size: 30%; }
-    .participant__image .participant__image {
-      position: static;
-      width: 100%;
-      height: 200px;
-      margin-top: 4.5em; } }
-
-@media (max-width: 699px) {
-  .hero__header--right {
-    position: relative;
-    z-index: 4; }
-  .hero__decor {
-    left: 33%; }
-  .navbar {
-    text-align: center;
-    padding-top: 3em;
-    padding-bottom: 6em; }
+      font-size: 50%; }
+    .hero__decor {
+      left: 33%; }
+    .hero__header--right {
+      position: relative;
+      z-index: 4; }
+    .navbar {
+      text-align: center;
+      padding-top: 3em;
+      padding-bottom: 6em; }
   .navbar__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; } }
+            justify-content: space-between; }
+    .participant__image {
+      right: 60%;
+      left: unset; } }
 
-@media (max-width: 499px) {
-  .hero__brand {
-    float: none; }
+@media screen and (max-width: 499px) {
+    html {
+      font-size: 30%; }
+    .hero__brand {
+      float: none; }
   .hero__logo {
     margin-top: 4em;
     width: 22em; }
-  .hero__motto {
-    display: none; }
-  .navbar {
-    font-size: 1.875em; } }
+    .hero__motto {
+      display: none; }
+    .navbar {
+      font-size: 1.875em; }
+    .participant__image {
+      position: static;
+      width: 100%;
+      height: 200px;
+      margin: 4.5em 0; }
+    .participant__activities {
+      overflow: hidden;
+      padding-bottom: 28px; }
+    .participant__header {
+      padding-left: .3276em; }
+    .participant__header--sub {
+      padding-left: 0;
+      margin-top: 0;
+      font-size: 2.93em; }
+    .participant__descr {
+      padding-left: 0;
+      font-size: 2.344em; }
+  .slider__slide {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    position: static; }
+    .slider__slide:before {
+      top: 0;
+      bottom: 0;
+      left: unset;
+      right: unset;
+      width: 100%;
+      margin: 0 -1em; }
+    .slider__toggles {
+      display: unset; } }
 
 @media (orientation: landscape) and (max-height: 549px) {
-  .hero__headers {
-    padding-top: 3em; }
-  .hero__decor {
-    top: 1em; }
-  .hero__navbar {
-    padding-bottom: 1em; }
-  .navbar {
-    padding: unset;
-    text-align: right; }
+    .hero__headers {
+      padding-top: 3em; }
+    .hero__decor {
+      top: 1em; }
+    .hero__navbar {
+      padding-bottom: 1em; }
+    .navbar {
+      padding: unset;
+      text-align: right; }
   .navbar__container {
     display: block; } }
-
-@media screen and (max-width: 799px) {
-  .participant__image {
-    left: 0; } }
-
-@media screen and (max-width: 498px) {
-  .participant__header {
-    padding-left: 1em; }
-  .participant__descr {
-    padding-left: 1em; } }

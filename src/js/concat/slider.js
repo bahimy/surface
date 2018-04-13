@@ -52,8 +52,3 @@
     var radio = new Radio(view);
     radio.placeRadio(document.querySelector('.js-participant__athlets'));
 })();
-
-(function() {
-    var container = document.querySelector('.js-hero__container');
-    container.style.height = window.innerHeight + 'px';
-})();

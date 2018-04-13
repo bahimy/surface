@@ -29,10 +29,26 @@ a {
 
 .hero__brand {
   float: left;
+
+  @include breakpoint(small) {
+    float: none;
+  }
+}
+
+.hero__logo {
+
+  @include breakpoint(small) {
+    margin-top: 4em;
+    width: 22em;
+  }
 }
 
 .hero__motto {
   text-align: right;
+
+  @include breakpoint(small) {
+    display: none;
+  }
 }
 
 .hero__headers {
@@ -44,6 +60,10 @@ a {
   padding: 14em 0 0;
   margin: 0 auto;
   margin-top: auto;
+
+  @media (orientation: landscape) and (max-height: 549px) {
+    padding-top: 3em;
+  }
 }
 
 .hero__header {
@@ -64,6 +84,14 @@ a {
     display: block;
     padding-top: 125%;
   }
+
+  @include breakpoint(medium) {
+    left: 33%;
+  }
+
+  @media (orientation: landscape) and (max-height: 549px) {
+    top: 1em;
+  }
 }
 
 .hero__header--left {
@@ -78,6 +106,11 @@ a {
   white-space: nowrap;
   margin-bottom: 0.228752814em;
   text-align: right;
+
+  @include breakpoint(medium) {
+    position: relative;
+    z-index: 4;
+  }
 }
 
 .hero__navbar {
@@ -88,6 +121,10 @@ a {
   margin: 0 auto;
   padding-bottom: 9em;
   margin-bottom: auto;
+
+  @media (orientation: landscape) and (max-height: 549px) {
+    padding-bottom: 1em;
+  }
 }
 
 .hero__buttons {
@@ -96,42 +133,3 @@ a {
   flex-basis: 100%;
 }
 
-@media (max-width: 699px) {
-  .hero__header--right {
-    position: relative;
-    z-index: 4;
-  }
-
-  .hero__decor {
-    left: 33%;
-  }
-}
-
-@media (max-width: 499px) {
-  .hero__brand {
-    float: none;
-  }
-
-  .hero__logo {
-    margin-top: 4em;
-    width: 22em;
-  }
-
-  .hero__motto {
-    display: none;
-  }
-}
-
-@media (orientation: landscape) and (max-height: 549px) {
-  .hero__headers {
-    padding-top: 3em;
-  }
-
-  .hero__decor {
-    top: 1em;
-  }
-
-  .hero__navbar {
-    padding-bottom: 1em;
-  }
-}
