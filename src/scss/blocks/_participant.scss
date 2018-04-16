@@ -3,6 +3,7 @@
 }
 
 .participant__wrap {
+  // establishes z-index context
   position: relative;
   z-index: 0;
   max-width: 1024px;
@@ -19,16 +20,33 @@
   background: url("../images/athlet.png") center/contain no-repeat;
   z-index: 3;
 
-  @include breakpoint(medium) {
-    right: 60%;
-    left: unset;
-  }
-
   @include breakpoint(small) {
     position: static;
     width: 100%;
     height: 200px;
     margin: 4.5em 0;
+  }
+}
+
+.participant__image--mirrored {
+  right: unset;
+  left: 60%;
+}
+
+.participant__image--player {
+  left: 50%;
+  width: 350px;
+  background-image: url("../images/player.png");
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include breakpoint(medium) {
+    left: 60%;
+  }
+
+  @include breakpoint(medium) {
+    background-position: center;
   }
 }
 
@@ -70,6 +88,16 @@
   }
 }
 
+.participant__header--mirrored {
+  padding-left: unset;
+  padding-right: 40%;
+
+  @include breakpoint(small) {
+    padding-left: unset;
+    padding-right: .3276em;
+  }
+}
+
 .participant__header--sub {
   padding-top: .55em;
   margin-top: 1.25em;
@@ -103,6 +131,15 @@
   @include breakpoint(small) {
     padding-left: 0;
     font-size: nth($font-sizes, 4);
+  }
+}
+
+.participant__descr--mirrored {
+  padding-left: unset;
+  padding-right: 40%;
+
+  @include breakpoint(small) {
+    padding-right: 0;
   }
 }
 

@@ -232,6 +232,18 @@ a {
   background: url("../images/athlet.png") center/contain no-repeat;
   z-index: 3; }
 
+.participant__image--mirrored {
+  right: unset;
+  left: 60%; }
+
+.participant__image--player {
+  left: 50%;
+  width: 350px;
+  background-image: url("../images/player.png");
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat; }
+
 .participant__activities {
   position: relative;
   overflow: unset;
@@ -256,6 +268,10 @@ a {
   color: #c1c1c1;
   padding-left: 40%; }
 
+.participant__header--mirrored {
+  padding-left: unset;
+  padding-right: 40%; }
+
 .participant__header--sub {
   padding-top: .55em;
   margin-top: 1.25em; }
@@ -274,6 +290,10 @@ a {
   .participant__descr:last-child {
     margin-bottom: 0;
     padding-bottom: 1.5em; }
+
+.participant__descr--mirrored {
+  padding-left: unset;
+  padding-right: 40%; }
 
 .participant__header--nomarg {
   margin-top: 0; }
@@ -339,9 +359,10 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-    .participant__image {
-      right: 60%;
-      left: unset; } }
+    .participant__image--player {
+      left: 60%; }
+    .participant__image--player {
+      background-position: center; } }
 
 @media screen and (max-width: 499px) {
     html {
@@ -365,6 +386,9 @@ a {
       padding-bottom: 28px; }
     .participant__header {
       padding-left: .3276em; }
+    .participant__header--mirrored {
+      padding-left: unset;
+      padding-right: .3276em; }
     .participant__header--sub {
       padding-left: 0;
       margin-top: 0;
@@ -372,6 +396,8 @@ a {
     .participant__descr {
       padding-left: 0;
       font-size: 2.344em; }
+    .participant__descr--mirrored {
+      padding-right: 0; }
   .slider__slide {
     vertical-align: top;
     display: inline-block;

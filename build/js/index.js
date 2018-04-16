@@ -48,9 +48,12 @@
         };
     };
 
-    var view = new View(document.querySelector('.js-participant__activities'))
-    var radio = new Radio(view);
-    radio.placeRadio(document.querySelector('.js-participant__athlets'));
+    var athletsView = new View(document.querySelectorAll('.js-participant__activities')[0])
+    var playersView = new View(document.querySelectorAll('.js-participant__activities')[1])
+    var radioAthlets = new Radio(athletsView);
+    var radioPlayers = new Radio(playersView);
+    radioAthlets.placeRadio(document.querySelector('.js-participant__athlets'));
+    radioPlayers.placeRadio(document.querySelector('.js-participant__players'));
 })();
 
 (function() {
