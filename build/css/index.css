@@ -340,7 +340,67 @@ a {
   background-color: #5e42b0;
   border-color: white; }
 
-@media screen and (max-width: 699px) {
+.activity {
+  max-width: 1024px;
+  margin: 0 auto; }
+
+.activity__item {
+  padding-top: 1px;
+  counter-increment: activity-counter; }
+  .activity__item:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.activity__image {
+  width: 50%;
+  margin-top: -1px; }
+
+.activity__image--left {
+  float: left;
+  margin-right: 8em; }
+
+.activity__image--right {
+  float: right;
+  margin-left: 4em; }
+
+.activity__header {
+  font-size: 3.662em;
+  color: #c1c1c1;
+  position: relative; }
+  .activity__header:before {
+    content: "0" counter(activity-counter);
+    display: block;
+    position: absolute;
+    font-size: .5em;
+    font-weight: bold;
+    left: 50%;
+    margin-left: -2em;
+    margin-top: -1em;
+    text-align: center;
+    line-height: 4em;
+    width: 4em;
+    height: 4em;
+    color: white;
+    background-color: #5e42b0;
+    text-decoration: underline; }
+  .activity__header--left {
+    padding-left: .4096em; }
+  .activity__header--right {
+    padding-right: .4096em; }
+
+.activity__descr--left {
+  padding-left: 1em; }
+
+.activity__descr--right {
+  padding-right: 1em; }
+
+.activity__dash {
+  font-size: 2.93em;
+  color: #5e42b0; }
+  .activity__dash--left {
+    padding-left: .5119em; }
+  @media screen and (max-width: 699px) {
     html {
       font-size: 50%; }
     .hero__decor {
@@ -363,8 +423,7 @@ a {
       left: 60%; }
     .participant__image--player {
       background-position: center; } }
-
-@media screen and (max-width: 499px) {
+  @media screen and (max-width: 499px) {
     html {
       font-size: 30%; }
     .hero__brand {
@@ -411,9 +470,10 @@ a {
       width: 100%;
       margin: 0 -1em; }
     .slider__toggles {
-      display: unset; } }
-
-@media (orientation: landscape) and (max-height: 549px) {
+      display: unset; }
+  .activity__descr {
+    font-size: 2.344em; } }
+  @media (orientation: landscape) and (max-height: 549px) {
     .hero__headers {
       padding-top: 3em; }
     .hero__decor {
@@ -425,3 +485,20 @@ a {
       text-align: right; }
   .navbar__container {
     display: block; } }
+  @media screen and (max-width: 768px) {
+    .activity__image {
+      width: 100%;
+      float: none;
+      margin: 0; }
+    .activity__header {
+      padding: 0;
+      margin-left: 10px; }
+      .activity__header:before {
+        margin-top: -6.5em;
+        margin-left: 0;
+        left: 0; }
+  .activity__descr {
+    padding: 0;
+    margin-left: 1em; }
+    .activity__dash {
+      padding-left: .5119em; } }

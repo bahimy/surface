@@ -1,0 +1,111 @@
+.activity {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.activity__item {
+  padding-top: 1px;
+  counter-increment: activity-counter;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.activity__image {
+  width: 50%;
+  margin-top: -1px;
+
+  @include breakpoint(large) {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+}
+
+.activity__image--left {
+  float: left;
+  margin-right: 8em;
+}
+.activity__image--right {
+  float: right;
+  margin-left: 4em;
+}
+
+.activity__header {
+  font-size: nth($font-sizes, 2);
+  color: $color-header;
+  position: relative;
+
+  &:before {
+    content: "0" counter(activity-counter);
+    display: block;
+    position: absolute;
+    font-size: .5em;
+    font-weight: bold;
+    left: 50%;
+    margin-left: -2em;
+    margin-top: -1em;
+    text-align: center;
+    line-height: 4em;
+    width: 4em;
+    height: 4em;
+    color: $color-canvas;
+    background-color: $color-brand-light;
+    text-decoration: underline;
+  }
+
+  &--left {
+    padding-left: .4096em;
+  }
+
+  &--right{
+    padding-right: .4096em;
+  }
+
+  @include breakpoint('large') {
+    padding: 0;
+    margin-left: 10px;
+
+    &:before {
+      margin-top: -6.5em;
+      margin-left: 0;
+      left: 0;
+    }
+  }
+}
+
+.activity__descr {
+
+  &--left {
+    padding-left: 1em;
+  }
+
+  &--right {
+    padding-right: 1em;
+  }
+
+  @include breakpoint(large) {
+    padding: 0;
+    margin-left: 1em;
+  }
+
+  @include breakpoint(small) {
+    font-size: nth($font-sizes, 4);
+  }
+}
+
+.activity__dash {
+  font-size: nth($font-sizes, 3);
+  color: $color-brand-light;
+
+  &--left {
+    padding-left: .5119em;
+  }
+
+  @include breakpoint(large) {
+    padding-left: .5119em;
+  }
+}
