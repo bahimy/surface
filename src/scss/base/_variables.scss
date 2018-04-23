@@ -32,7 +32,7 @@ $font-sizes: getFontSizes($font-paragraph);
 /* Break points */
 
 $breakpoints: (
-  'small': 499px,
+  'large': 768px,
   'medium': 699px,
-  'large': 768px
+  'small': 499px
 );

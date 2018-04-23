@@ -400,7 +400,31 @@ a {
   color: #5e42b0; }
   .activity__dash--left {
     padding-left: .5119em; }
-  @media screen and (max-width: 699px) {
+
+.download {
+  background-color: #5e42b0;
+  border-top: 1px solid #0a0e34;
+  background-image: url("../images/stadium.jpg"); }
+
+@media screen and (max-width: 768px) {
+    .activity__image {
+      width: 100%;
+      float: none;
+      margin: 0; }
+    .activity__header {
+      padding: 0;
+      margin-left: .4096em; }
+      .activity__header:before {
+        margin-top: -6.5em;
+        margin-left: 0;
+        left: 0; }
+  .activity__descr {
+    padding: 0;
+    margin-left: 1em; }
+    .activity__dash {
+      padding-left: .5119em; } }
+
+@media screen and (max-width: 699px) {
     html {
       font-size: 50%; }
     .hero__decor {
@@ -423,7 +447,21 @@ a {
       left: 60%; }
     .participant__image--player {
       background-position: center; } }
-  @media screen and (max-width: 499px) {
+
+@media (orientation: landscape) and (max-height: 549px) {
+    .hero__headers {
+      padding-top: 3em; }
+    .hero__decor {
+      top: 1em; }
+    .hero__navbar {
+      padding-bottom: 1em; }
+    .navbar {
+      padding: unset;
+      text-align: right; }
+  .navbar__container {
+    display: block; } }
+
+@media screen and (max-width: 499px) {
     html {
       font-size: 30%; }
     .hero__brand {
@@ -446,8 +484,7 @@ a {
     .participant__header {
       padding-left: .3276em; }
     .participant__header--mirrored {
-      padding-left: unset;
-      padding-right: .3276em; }
+      padding-right: 0; }
     .participant__header--sub {
       padding-left: 0;
       margin-top: 0;
@@ -471,34 +508,9 @@ a {
       margin: 0 -1em; }
     .slider__toggles {
       display: unset; }
-  .activity__descr {
-    font-size: 2.344em; } }
-  @media (orientation: landscape) and (max-height: 549px) {
-    .hero__headers {
-      padding-top: 3em; }
-    .hero__decor {
-      top: 1em; }
-    .hero__navbar {
-      padding-bottom: 1em; }
-    .navbar {
-      padding: unset;
-      text-align: right; }
-  .navbar__container {
-    display: block; } }
-  @media screen and (max-width: 768px) {
-    .activity__image {
-      width: 100%;
-      float: none;
-      margin: 0; }
     .activity__header {
-      padding: 0;
-      margin-left: 10px; }
-      .activity__header:before {
-        margin-top: -6.5em;
-        margin-left: 0;
-        left: 0; }
+      margin-left: .64em; }
   .activity__descr {
-    padding: 0;
-    margin-left: 1em; }
+    font-size: 2.344em; }
     .activity__dash {
-      padding-left: .5119em; } }
+      padding-left: .8em; } }

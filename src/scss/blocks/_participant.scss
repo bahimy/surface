@@ -93,8 +93,7 @@
   padding-right: 40%;
 
   @include breakpoint(small) {
-    padding-left: unset;
-    padding-right: .3276em;
+    padding-right: 0;
   }
 }
 

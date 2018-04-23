@@ -65,15 +65,19 @@
     padding-right: .4096em;
   }
 
-  @include breakpoint('large') {
+  @include breakpoint(large) {
     padding: 0;
-    margin-left: 10px;
+    margin-left: .4096em;
 
     &:before {
       margin-top: -6.5em;
       margin-left: 0;
       left: 0;
     }
+  }
+
+  @include breakpoint(small) {
+    margin-left: .64em;
   }
 }
 
@@ -87,13 +91,13 @@
     padding-right: 1em;
   }
 
+  @include breakpoint(small) {
+    font-size: nth($font-sizes, 4);
+  }
+
   @include breakpoint(large) {
     padding: 0;
     margin-left: 1em;
-  }
-
-  @include breakpoint(small) {
-    font-size: nth($font-sizes, 4);
   }
 }
 
@@ -103,6 +107,10 @@
 
   &--left {
     padding-left: .5119em;
+  }
+
+  @include breakpoint(small) {
+    padding-left: .8em;
   }
 
   @include breakpoint(large) {

@@ -85,7 +85,11 @@ gulp.task('css', ['images', 'copyfonts', 'video'], function() {
     var postCssOpts = [
         assets({ loadPaths: ['images/'] }),
         autoprefixer({ browsers: ['last 2 versions', '> 2%'] }),
-        mqpacker
+        mqpacker({
+            sort: function(a, b) {
+                return b.match(/\d+/g)[0] - a.match(/\d+/g)[0];
+            }
+        })
     ]
 
     if (!devBuild) postCssOpts.push(cssnano)
