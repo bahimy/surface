@@ -402,9 +402,51 @@ a {
     padding-left: .5119em; }
 
 .download {
+  color: white;
   background-color: #5e42b0;
   border-top: 1px solid #0a0e34;
-  background-image: url("../images/stadium.jpg"); }
+  background-image: url("../images/stadium.jpg");
+  background-size: cover; }
+
+.download__headings {
+  padding-top: 10em;
+  padding-bottom: 7em;
+  padding-left: 8em;
+  width: 48em;
+  margin: 0 auto;
+  background: url("../images/logo.png") no-repeat left 9em/7em, url("../images/slash_small.png") no-repeat 10em 9.3em/6em, url("../images/slash_large.png") no-repeat 28em 6em/12em; }
+
+.download__heading {
+  margin-top: 0; }
+
+.download__subheading {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: bold;
+  line-height: 1em; }
+
+.download__buttons {
+  text-align: center;
+  letter-spacing: 3em;
+  margin-bottom: 4.5em; }
+
+.footer {
+  background-color: #0a0e34; }
+  .footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.footer__brand {
+  padding: 2em 2em;
+  float: left; }
+
+.footer__logo {
+  height: 2em; }
+
+.footer__social {
+  display: inline; }
 
 @media screen and (max-width: 768px) {
     .activity__image {
@@ -446,7 +488,12 @@ a {
     .participant__image--player {
       left: 60%; }
     .participant__image--player {
-      background-position: center; } }
+      background-position: center; }
+    .download__headings {
+      padding-top: 20em;
+      padding-left: 0;
+      width: 40em;
+      background-position: center 10em, 2em 19.3em, 20em 16em; } }
 
 @media (orientation: landscape) and (max-height: 549px) {
     .hero__headers {

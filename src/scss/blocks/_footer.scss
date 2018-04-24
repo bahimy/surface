@@ -1,0 +1,22 @@
+.footer {
+  background-color: $color-brand-dark;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.footer__brand {
+  padding: 2em 2em;
+  float: left;
+}
+
+.footer__logo {
+  height: 2em;
+}
+
+.footer__social {
+  display: inline;
+}
