@@ -1,5 +1,5 @@
 .footer {
-  background-color: $color-brand-dark;
+  background-color: rgba($color-brand-dark, .5);
 
   &:after {
     content: "";
@@ -9,14 +9,71 @@
 }
 
 .footer__brand {
-  padding: 2em 2em;
+  padding: 2em;
   float: left;
+
+  @include breakpoint(large) {
+    display: none;
+  }
 }
 
 .footer__logo {
   height: 2em;
 }
 
+.footer__links {
+  float: right;
+  padding: 2em;
+
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+
+.footer__link {
+  display: inline;
+  padding-left: .7em;
+
+  &:after {
+    content: "|";
+    padding-left: .7em;
+  }
+
+  &:last-child {
+    &:after {
+      content: "";
+    }
+  }
+}
+
+.footer__socials {
+  text-align: center;
+  padding: 2em 0;
+
+  @include breakpoint(medium) {
+    padding: 3em 0;
+  }
+}
+
 .footer__social {
   display: inline;
+  padding: 0 1em;
+
+  @include breakpoint(large) {
+    padding: 0 2em;
+  }
+
+  @include breakpoint(small) {
+    padding: 0 3em;
+  }
+}
+
+.footer__button {
+  display: inline-block;
+  line-height: 2em;
+}
+
+.footer__icon {
+  height: 15px;
+  vertical-align: middle;
 }

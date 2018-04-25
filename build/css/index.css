@@ -432,21 +432,47 @@ a {
   margin-bottom: 4.5em; }
 
 .footer {
-  background-color: #0a0e34; }
+  background-color: rgba(10, 14, 52, 0.5); }
   .footer:after {
     content: "";
     display: table;
     clear: both; }
 
 .footer__brand {
-  padding: 2em 2em;
+  padding: 2em;
   float: left; }
 
 .footer__logo {
   height: 2em; }
 
+.footer__links {
+  float: right;
+  padding: 2em; }
+
+.footer__link {
+  display: inline;
+  padding-left: .7em; }
+  .footer__link:after {
+    content: "|";
+    padding-left: .7em; }
+  .footer__link:last-child:after {
+    content: ""; }
+
+.footer__socials {
+  text-align: center;
+  padding: 2em 0; }
+
 .footer__social {
-  display: inline; }
+  display: inline;
+  padding: 0 1em; }
+
+.footer__button {
+  display: inline-block;
+  line-height: 2em; }
+
+.footer__icon {
+  height: 15px;
+  vertical-align: middle; }
 
 @media screen and (max-width: 768px) {
     .activity__image {
@@ -464,7 +490,13 @@ a {
     padding: 0;
     margin-left: 1em; }
     .activity__dash {
-      padding-left: .5119em; } }
+      padding-left: .5119em; }
+    .footer__brand {
+      display: none; }
+    .footer__links {
+      display: none; }
+    .footer__social {
+      padding: 0 2em; } }
 
 @media screen and (max-width: 699px) {
     html {
@@ -493,7 +525,9 @@ a {
       padding-top: 20em;
       padding-left: 0;
       width: 40em;
-      background-position: center 10em, 2em 19.3em, 20em 16em; } }
+      background-position: center 10em, 2em 19.3em, 20em 16em; }
+    .footer__socials {
+      padding: 3em 0; } }
 
 @media (orientation: landscape) and (max-height: 549px) {
     .hero__headers {
@@ -560,4 +594,6 @@ a {
   .activity__descr {
     font-size: 2.344em; }
     .activity__dash {
-      padding-left: .8em; } }
+      padding-left: .8em; }
+    .footer__social {
+      padding: 0 3em; } }
