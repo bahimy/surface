@@ -12,6 +12,10 @@
     display: table;
     clear: both;
   }
+
+  @include breakpoint(small) {
+    padding-top: 0;
+  }
 }
 
 .activity__image {
@@ -104,6 +108,7 @@
 .activity__dash {
   font-size: nth($font-sizes, 3);
   color: $color-brand-light;
+  margin: 0;
 
   &--left {
     padding-left: .5119em;
@@ -115,5 +120,6 @@
 
   @include breakpoint(large) {
     padding-left: .5119em;
+    padding-bottom: 1.5em;
   }
 }

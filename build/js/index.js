@@ -1,4 +1,5 @@
 (function() {
+    "use strict";
     var View = function(container) {
         var elements = [];
         Array.prototype.forEach.call(container.childNodes, function(currentElement) {
@@ -48,8 +49,8 @@
         };
     };
 
-    var athletsView = new View(document.querySelectorAll('.js-participant__activities')[0])
-    var playersView = new View(document.querySelectorAll('.js-participant__activities')[1])
+    var athletsView = new View(document.querySelectorAll('.js-participant__activities')[0]);
+    var playersView = new View(document.querySelectorAll('.js-participant__activities')[1]);
     var radioAthlets = new Radio(athletsView);
     var radioPlayers = new Radio(playersView);
     radioAthlets.placeRadio(document.querySelector('.js-participant__athlets'));

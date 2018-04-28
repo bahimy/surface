@@ -1,5 +1,14 @@
 .participant {
-  overflow: hidden;
+}
+
+.participant__athlets {
+  position: relative;
+  z-index: $participant-athlets;
+}
+
+.participant__players {
+  position: relative;
+  z-index: $participant-players;
 }
 
 .participant__wrap {
@@ -89,7 +98,7 @@
 }
 
 .participant__header--mirrored {
-  padding-left: unset;
+  padding-left: 0;
   padding-right: 40%;
 
   @include breakpoint(small) {
@@ -121,11 +130,8 @@
 .participant__descr {
   padding-left: 40%;
   white-space: normal;
-
-  &:last-child {
-    margin-bottom: 0;
-    padding-bottom: 1.5em;
-  }
+  margin-bottom: 0;
+  padding-bottom: 1.5em;
 
   @include breakpoint(small) {
     padding-left: 0;
@@ -134,7 +140,7 @@
 }
 
 .participant__descr--mirrored {
-  padding-left: unset;
+  padding-left: 0;
   padding-right: 40%;
 
   @include breakpoint(small) {
