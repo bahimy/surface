@@ -214,6 +214,9 @@ a {
 .button--gp {
   background: #5e42b0 url("../images/gplay.png") no-repeat 1.2em center/1.5em; }
 
+.participant {
+  overflow: hidden; }
+
 .participant__athlets {
   position: relative;
   z-index: 5; }
