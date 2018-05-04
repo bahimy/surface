@@ -9,7 +9,7 @@ To work on a project you will need node.js and npm. Modules are exluded, so when
 ## Project structure
 I believe the structure of the project is, by and large, self explanatory. You shuld be familiar with gulp to understand source files proccesing.
 
-.
+```.
 ├── html
 │   └── index.html
 ├── images
@@ -31,3 +31,4 @@ I believe the structure of the project is, by and large, self explanatory. You s
     │   │
     │   ...
     └── index.scss            # entry point
+```
